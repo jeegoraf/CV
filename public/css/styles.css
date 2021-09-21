@@ -37,6 +37,7 @@
 
 
 body {
+  /*здесь не указывается явных размеров страницы*/
   background-color: #FFFFFF;
   color: #262b33;
   font-family: 'Lato', sans-serif;
@@ -44,17 +45,19 @@ body {
   font-weight: 400;
   line-height: 24px;
   margin: 0;
-  min-height: 100vh;
+  min-height: 100vh; /* указывается минимально возможная высота body*/
   position: relative;
 }
 
 .header {
-  background-color: #F5F5F5;
+  /* Не является flex, но растягивается - почему? Потому что тянется не header, a header-content */
+  background-color: #F5F5F5; /* серый цвет фона */
   height: 250px;
   position: relative;
 }
 
 .header__content {
+  
   padding: 45px 64px;
   display: flex;
   justify-content: space-between;
@@ -106,5 +109,188 @@ body {
 }
 
 .resume-page__content {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
   padding: 70px;
+}
+
+.resume-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.resume-common_info{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  height: 60px;
+  align-items: left;
+}
+
+.name{
+  font-size: 28px;
+}
+
+.position{
+  font-size: 24px;
+  color: #555555;
+}
+
+.resume-contacts{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  text-align: right;
+  height: 60px;
+  color: #AAAAAA;
+  font-size: 18px;
+}
+
+.resume-intro{
+  font-size: 32px;
+  line-height: 40px;
+  color: #555555;
+}
+
+.resume-education_and_skills{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.resume-education{
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  gap: 16px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #252525;
+}
+
+.resume-skills{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color:  #555555;
+  margin-right: 25px;
+}
+
+.resume-experience_and_languages{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.resume-experience{
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  gap: 16px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #555555;
+}
+
+.resume-languages{
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 15px;
+  color:  #555555;
+}
+
+.resume-internship{
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  gap: 16px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #555555;
+}
+
+.resume-public_talks{
+  display: flex;
+  width: 550px;
+  flex-direction: column;
+  gap: 16px;
+  color:  #555555;
+}
+
+.resume-public_talks-week_of_science{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resume-public_talks-conference{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resume-links{
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-bottom: -40px;
+}
+
+.github{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 4px;
+  width: 26px;
+  height: 26px;
+}
+
+.github:hover{
+
+  background-color:black;
+  border-radius: 4px;
+  border: 5px;
+}
+
+.github:hover .git_img{
+
+  filter: brightness(0) invert(1);
+}
+
+.twitter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 4px;
+  width: 26px;
+  height: 26px;
+}
+
+.twitter:hover{
+
+  background-color:#33A4EC;
+  border-radius: 4px;
+  border: 5px;
+}
+
+.twitter:hover .twi_img{
+  filter: brightness(0)invert(1);
 }
